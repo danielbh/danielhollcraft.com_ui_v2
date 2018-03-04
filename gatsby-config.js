@@ -4,19 +4,20 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    `gatsby-transformer-remark`,
+    'gatsby-transformer-remark',
+    'gatsby-plugin-sass',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `src`,
+        name: 'src',
         path: `${__dirname}/src/`,
       },
     },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography.js`,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-typography',
+    //   options: {
+    //     pathToConfigModule: 'src/utils/typography.js',
+    //   },
+    // },
   ],
-};
+}

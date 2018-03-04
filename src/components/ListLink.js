@@ -1,10 +1,10 @@
 import React from 'react'
 import Link from "gatsby-link";
 
-const ListLink = props =>
-  <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-    <Link to={props.to}>
-      {props.children}
+const ListLink = ({ to, className, children }) =>
+  <li>
+    <Link to={to} exact activeClassName="active" className={className}>
+      {children}
     </Link>
   </li>
 

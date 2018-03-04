@@ -2,37 +2,81 @@ import React from 'react'
 import Link from 'gatsby-link'
 import Helmet from 'react-helmet'
 import { ListLink } from '../components'
+import avatar from '../assets/images/profile-photo.png'
+import './sass/main.scss'
 
-
-export default ({ data,  children }) => (
-  <div style={{ margin: '0 auto', maxWidth: 650, padding: '1.25rem 1rem' }}>
-    <Helmet
-      title={data.site.siteMetadata.title}
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
-      ]}
-    />
-    <header style={{ marginBottom: '1.5rem' }}>
-      <Link to="/" style={{ textShadow: 'none', backgroundImage: 'none' }}>
-        <h3 style={{ display: 'inline' }}>{data.site.siteMetadata.title}</h3>
-      </Link>
-      <ul style={{ listStyle: 'none', float: 'right' }}>
-        <ListLink to="/">Home</ListLink>
-        <ListLink to="/about/">About</ListLink>
-        <ListLink to="/contact/">Contact</ListLink>
-      </ul>
-    </header>
-    {children()}
+export default ({ children }) => (
+  <div>
+    <div id="titleBar"><a href="#header" className="toggle"></a><span className="title"><a href="#">Daniel Hollcraft</a></span></div>
+    <section id="header">
+      <header>
+        <span className="image avatar"><img src={avatar} alt="" /></span>
+        <h1 id="logo"><a href="#">Daniel Hollcraft</a></h1>
+        <p>Frontend Web Developer<br />
+          React | React Native | Whatever
+        </p>
+      </header>
+      <nav id="nav">
+        <ul>
+          <ListLink to="/">About</ListLink>
+          <ListLink to="/portfolio">Portfolio</ListLink>
+          <ListLink to="/blog">Blog</ListLink>
+          <ListLink to="/contact">Contact</ListLink>
+        </ul>
+      </nav>
+      <footer>
+        <ul className="icons">
+          <li><a href="#" className="icon fa-github"><span className="label">Github</span></a></li>
+          <li><a href="#" className="icon fa-linkedin"><span className="label">Github</span></a></li>
+          <li><a href="#" className="icon fa-envelope"><span className="label">Email</span></a></li>
+        </ul>
+      </footer>
+    </section>
+    <div id="wrapper">
+      <div id="main">
+        {children()}
+      </div>
+      <section id="footer">
+        <div className="container">
+          <ul className="copyright">
+            <li>&copy; Daniel Hollcraft. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
   </div>
 )
 
-export const query = graphql`
-  query AboutQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
+
+// export default ({ data,  children }) => (
+//   <div style={{ margin: '0 auto', maxWidth: 650, padding: '1.25rem 1rem' }}>
+//     <Helmet
+//       title={data.site.siteMetadata.title}
+//       meta={[
+//         { name: 'description', content: 'Sample' },
+//         { name: 'keywords', content: 'sample, something' },
+//       ]}
+//     />
+//     <header style={{ marginBottom: '1.5rem' }}>
+//       <Link to="/" style={{ textShadow: 'none', backgroundImage: 'none' }}>
+//         <h3 style={{ display: 'inline' }}>{data.site.siteMetadata.title}</h3>
+//       </Link>
+//       <ul style={{ listStyle: 'none', float: 'right' }}>
+//         <ListLink to="/">Home</ListLink>
+//         <ListLink to="/about/">About</ListLink>
+//         <ListLink to="/contact/">Contact</ListLink>
+//       </ul>
+//     </header>
+//     {children()}
+//   </div>
+// )
+
+// export const query = graphql`
+//   query AboutQuery {
+//     site {
+//       siteMetadata {
+//         title
+//       }
+//     }
+//   }
+// `
