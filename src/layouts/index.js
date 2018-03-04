@@ -6,7 +6,7 @@ import avatar from '../assets/images/profile-photo.png'
 import './sass/main.scss'
 
 export default ({ children }) => (
-  <div>
+  <div id="content">
     <div id="titleBar"><a href="#header" className="toggle"></a><span className="title"><a href="#">Daniel Hollcraft</a></span></div>
     <section id="header">
       <header>
@@ -17,8 +17,9 @@ export default ({ children }) => (
         </p>
       </header>
       <nav id="nav">
+
         <ul>
-          <ListLink to="/">About</ListLink>
+          <ListLink to="/">Home</ListLink>
           <ListLink to="/portfolio">Portfolio</ListLink>
           <ListLink to="/blog">Blog</ListLink>
           <ListLink to="/contact">Contact</ListLink>
@@ -39,7 +40,7 @@ export default ({ children }) => (
       <section id="footer">
         <div className="container">
           <ul className="copyright">
-            <li>&copy; Daniel Hollcraft. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>&copy; Daniel Hollcraft. All rights reserved.</li><li>Theme: <a href="http://html5up.net">HTML5 UP</a></li>
           </ul>
         </div>
       </section>

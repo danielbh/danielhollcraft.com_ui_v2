@@ -1,16 +1,31 @@
-import React from "react";
-import Link from "gatsby-link";
+import React, { Component } from 'react'
+import Link from 'gatsby-link'
+import { Rocket } from '../components'
 
-export default ({ data }) => {
-  return (
-    <section id="one">
-      <div className="container">
-        <header className="major">
-          <h2>Hello. I'm Daniel Hollcraft</h2>
-          <p>Web Developer Living in New York, USA</p>
+class Main extends Component {
+
+  componentDidMount() {
+  }
+
+  render() {
+    return (
+      <div>
+        <header id="homepage-hero">
+          <h1>Daniel Hollcraft</h1>
+          <Rocket />
         </header>
-        <p>I've been programming since 2011.</p>
+        <section>
+          <article className="container">
+            <header className="major">
+              <h2>Web Developer</h2>
+              <h2>Frontend | React | Node.js</h2>
+              <h2 style={{ textDecoration: 'underline' }}>Check out my work</h2>
+            </header>
+          </article>
+        </section>
       </div>
-    </section>
-  )
-};
+    )
+  }
+}
+
+export default Main
