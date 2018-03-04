@@ -16,6 +16,15 @@
     "typography-theme-fairy-gates": "^0.15.11",
     "typography-theme-kirkham": "^0.16.3"
   },
+  "devDependencies": {
+    "prettier": "^1.11.0",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.12.2",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.4.0"
+  },
   "keywords": [
     "gatsby"
   ],
@@ -26,8 +35,5 @@
     "develop": "gatsby develop",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "prettier": "^1.11.0"
   }
 }
