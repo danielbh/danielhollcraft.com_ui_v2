@@ -1026,18 +1026,50 @@
 
 /* One */
 
-	#one {
-		&:before {
-			background-image: url('../../assets/images/banner.jpg');
-			background-position: top right;
-			background-repeat: no-repeat;
-			background-size: cover;
-			content: '';
-			display: block;
-			height: 15em;
-			max-width: 100%;
-		}
-	}
+	// #one {
+	// 	&:before {
+  //     background-image: url('../../assets/images/banner.jpg');
+  //     filter: opacity(.55);
+	// 		background-position: top right;
+	// 		background-repeat: no-repeat;
+	// 		background-size: cover;
+	// 		content: '';
+	// 		display: block;
+	// 		height: 15em;
+	// 		max-width: 100%;
+	// 	}
+  // }
+body {
+  background: #111;
+  color: #ccc;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+canvas#bg {
+  // position: fixed;
+  // left: 0;
+  // top: 0;
+  width: 100%;
+  display: block;
+  height: 15em;
+  max-width: 100%;
+  margin-bottom: 2em;
+}
+
+#bg {
+  //  background-image: url('../../assets/images/banner.jpg');
+  //  filter: opacity(.55);
+  //  background-position: top right;
+  //  background-repeat: no-repeat;
+  //  background-size: cover;
+  //  content: '';
+   display: block;
+   height: 15em;
+   max-width: 100%;
+}
 
 /* Footer */
 
