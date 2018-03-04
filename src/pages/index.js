@@ -19,7 +19,9 @@ class Main extends Component {
             <header className="major">
               <h2>Web Developer</h2>
               <h2>Frontend | React | Node.js</h2>
-              <h2 style={{ textDecoration: 'underline' }}>Check out my work</h2>
+              <h2 style={{ textDecoration: 'underline' }}>
+                <Link to="/portfolio">Check out my work</Link>
+              </h2>
             </header>
           </article>
         </section>
