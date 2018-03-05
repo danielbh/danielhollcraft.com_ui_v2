@@ -1,3 +1,5 @@
+@import '../../layouts/sass/libs/skel';
+
 html {
   box-sizing: border-box;
 }
@@ -5,13 +7,66 @@ html {
   box-sizing: inherit;
 }
 
+@include skel-breakpoints((
+  xxlarge: '(min-width: 1681px)',
+  xlarge: '(max-width: 1680px)',
+  large: '(max-width: 1280px)',
+  medium: '(max-width: 1024px)',
+  small: '(max-width: 736px)',
+  xsmall: '(max-width: 480px)'
+));
+
 .loader {
   position: absolute;
-  left: calc(50% + 250px);
-  bottom: calc(50% - 320px);
   transform: skewY(-4deg);
   transform-origin: top left;
 }
+
+/* Loader Breakpoints */
+
+@include breakpoint(xxlarge) {
+  .loader {
+    left: calc(50% + 250px);
+    bottom: calc(50% - 375px);
+  }
+}
+
+@include breakpoint(xlarge) {
+  .loader {
+    left: calc(50% + 200px);
+    bottom: calc(50% - 320px);
+  }
+}
+
+@include breakpoint(large) {
+  .loader{
+    left: calc(50% + 200px);
+    bottom: calc(50% - 280px);
+  }
+}
+
+@include breakpoint(medium) {
+  .loader {
+    left: calc(50% + 120px);
+    bottom: calc(50% - 220px);
+  }
+}
+
+@include breakpoint(small) {
+  .loader {
+    left: calc(50% + 80px);
+    bottom: calc(50% - 220px);
+  }
+}
+
+@include breakpoint(xsmall) {
+  .loader {
+    left: calc(50% + 40px);
+    bottom: calc(50% - 210px);
+  }
+}
+
+
 
 .loader-ring {
   background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/61488/loader-stars.jpg') no-repeat center center;

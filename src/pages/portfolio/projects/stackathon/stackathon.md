@@ -1,6 +1,6 @@
 ---
 path: /portfolio/stackathon
-title: Google Clapper responder
+title: Google Clapper Responder
 previewImage: ./projects/stackathon/stackathon.png
 start: Dec 2017,
 end: Dec 2017,

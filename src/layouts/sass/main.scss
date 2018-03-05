@@ -1009,6 +1009,7 @@
 /* Main */
 
 	#main {
+    // To keep footer stuck to bottom
     min-height: calc(100vh - 70px);
 		> section {
 			border-top: solid (_size(border-width) * 3) _palette(border);
@@ -1022,7 +1023,7 @@
 			}
 		}
 	}
-
+/* Home Page Hero */
   #homepage-hero {
     position: relative;
     background-position: top right;
@@ -1100,8 +1101,7 @@
 				font-size: 13pt;
 			}
 
-		/* Header */
-
+    /* Header */
 			#header {
 				width: $size-header;
 
@@ -1150,7 +1150,6 @@
 			}
 
 		/* Header */
-
 			#header {
 				width: $size-header;
 			}
@@ -1199,7 +1198,15 @@
 				}
 			}
 
-		/* Header */
+    /* Header */
+
+      #homepage-hero {
+        height: 20em;
+        h1 {
+          margin-top: 0.5em;
+          font-size: 4.5em;
+        }
+      }
 
 			#header {
 				@include vendor('backface-visibility', 'hidden');
