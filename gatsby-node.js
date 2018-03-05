@@ -16,7 +16,7 @@ exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
       value: slug,
     })
   }
-};
+}
 
 exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators

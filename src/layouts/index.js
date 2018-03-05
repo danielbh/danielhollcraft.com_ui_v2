@@ -12,8 +12,8 @@ export default ({ children }) => (
       <header>
         <span className="image avatar"><img src={avatar} alt="" /></span>
         <h1 id="logo"><a href="#">Daniel Hollcraft</a></h1>
-        <p>Frontend Web Developer<br />
-          React | React Native | Whatever
+        <p>Web Developer<br />
+          React | React Native | Node.js
         </p>
       </header>
       <nav id="nav">
@@ -21,15 +21,14 @@ export default ({ children }) => (
         <ul>
           <ListLink to="/">Home</ListLink>
           <ListLink to="/portfolio">Portfolio</ListLink>
-          <ListLink to="/blog">Blog</ListLink>
-          <ListLink to="/contact">Contact</ListLink>
+          {/* <ListLink to="/blog">Blog</ListLink>
+          <ListLink to="/contact">Contact</ListLink> */}
         </ul>
       </nav>
       <footer>
         <ul className="icons">
-          <li><a href="#" className="icon fa-github"><span className="label">Github</span></a></li>
-          <li><a href="#" className="icon fa-linkedin"><span className="label">Github</span></a></li>
-          <li><a href="#" className="icon fa-envelope"><span className="label">Email</span></a></li>
+          <li><a href="https://github.com/danielbh" className="icon fa-github"><span className="label">Github</span></a></li>
+          <li><a href="https://www.linkedin.com/in/daniel-hollcraft/" className="icon fa-linkedin"><span className="label">Linkedin</span></a></li>
         </ul>
       </footer>
     </section>
